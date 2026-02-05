@@ -9,13 +9,11 @@ export default function Footer() {
 
                     {/* Brand */}
                     <div className="flex items-center gap-3">
-                        <div className="w-10 h-10 bg-jms-accent rounded-lg flex items-center justify-center">
-                            <Sun className="text-white w-6 h-6" />
-                        </div>
-                        <div>
-                            <span className="font-bold text-xl text-white block leading-none">JMS</span>
-                            <span className="text-[10px] uppercase tracking-widest text-gray-400">Energia Solar</span>
-                        </div>
+                        <img
+                            src="/logo/367cf42e-0b6e-42c9-9d7f-cb7dd5fd242b.jpg"
+                            alt="JMS Energia Solar"
+                            className="h-10 md:h-12 w-auto rounded-lg"
+                        />
                     </div>
 
                     {/* Copyright */}

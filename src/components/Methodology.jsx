@@ -36,7 +36,7 @@ export default function Methodology() {
                 <div className="flex flex-col md:flex-row gap-12 items-start">
 
                     {/* Left Content */}
-                    <div className="w-full md:w-5/12 sticky top-24">
+                    <div className="w-full md:w-5/12 md:sticky md:top-24">
                         <span className="text-jms-accent font-bold tracking-wider uppercase text-sm mb-2 block">
                             Metodologia JMS
                         </span>
@@ -67,28 +67,28 @@ export default function Methodology() {
                         </div>
                     </div>
 
-                    {/* Right Checklist */}
-                    <div className="w-full md:w-7/12">
-                        <div className="space-y-6">
-                            {methodologySteps.map((step, index) => (
-                                <div
-                                    key={index}
-                                    className="group flex gap-4 p-6 rounded-xl hover:bg-slate-50 transition-colors border border-transparent hover:border-slate-100"
-                                >
-                                    <div className="w-12 h-12 bg-jms-primary rounded-lg flex items-center justify-center text-white shrink-0 group-hover:bg-jms-accent transition-colors shadow-lg shadow-jms-primary/10">
+                    {/* Right Content - Clean Cards */}
+                    <div className="w-full md:w-7/12 space-y-4 md:space-y-6">
+                        {methodologySteps.map((step, index) => (
+                            <div
+                                key={index}
+                                className="bg-white p-6 rounded-xl border border-slate-100 shadow-sm hover:shadow-md transition-all duration-300 flex gap-4 md:gap-6 items-start group"
+                            >
+                                <div className="shrink-0">
+                                    <div className="w-12 h-12 bg-jms-primary/5 rounded-lg flex items-center justify-center text-jms-primary group-hover:bg-jms-primary group-hover:text-white transition-colors duration-300">
                                         <step.icon className="w-6 h-6" />
                                     </div>
-                                    <div>
-                                        <h3 className="text-lg font-bold text-jms-primary mb-2 group-hover:text-jms-accent transition-colors">
-                                            {step.title}
-                                        </h3>
-                                        <p className="text-gray-600 leading-relaxed">
-                                            {step.description}
-                                        </p>
-                                    </div>
                                 </div>
-                            ))}
-                        </div>
+                                <div>
+                                    <h3 className="text-lg font-bold text-jms-primary mb-2 group-hover:text-jms-accent transition-colors">
+                                        {step.title}
+                                    </h3>
+                                    <p className="text-gray-600 leading-relaxed text-sm md:text-base">
+                                        {step.description}
+                                    </p>
+                                </div>
+                            </div>
+                        ))}
                     </div>
 
                 </div>

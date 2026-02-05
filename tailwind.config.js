@@ -7,13 +7,16 @@ export default {
   theme: {
     extend: {
       colors: {
-        'jms-primary': '#0f172a', // Slate 900
-        'jms-primary-light': '#1e293b', // Slate 800
-        'jms-accent': '#f59e0b', // Amber 500
-        'jms-accent-hover': '#d97706', // Amber 600
+        'jms-primary': '#00646B', // Verde Petróleo
+        'jms-primary-light': '#789BA2', // Azul Acinzentado
+        'jms-accent': '#F79733', // Laranja Vibrante
+        'jms-accent-hover': '#D67D20', // Laranja Escuro (Hover)
+        'jms-peach': '#FDC68C', // Pêssego
       },
       fontFamily: {
         sans: ['Inter', 'system-ui', 'sans-serif'],
+        heading: ['Outfit', 'sans-serif'],
+        rounded: ['Quicksand', 'sans-serif'],
       },
       animation: {
         'fade-in-up': 'fadeInUp 0.8s ease-out forwards',

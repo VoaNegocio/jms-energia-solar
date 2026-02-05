@@ -6,6 +6,17 @@
     html {
         font-family: 'Inter', system-ui, sans-serif;
         scroll-behavior: smooth;
+        color: #00646B;
+        /* jms-primary */
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        font-family: 'Outfit', sans-serif;
     }
 
     body {
@@ -24,5 +35,14 @@
 
     .glass-dark {
         @apply bg-slate-900/80 backdrop-blur-md border border-white/5;
+    }
+
+    .scrollbar-hide::-webkit-scrollbar {
+        display: none;
+    }
+
+    .scrollbar-hide {
+        -ms-overflow-style: none;
+        scrollbar-width: none;
     }
 }

@@ -15,23 +15,17 @@ export default function Header() {
 
     return (
         <header
-            className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled ? 'bg-jms-primary/95 backdrop-blur-md py-3 shadow-lg' : 'bg-transparent py-5'
+            className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled ? 'bg-jms-primary/95 backdrop-blur-md py-2 shadow-lg' : 'bg-transparent py-4'
                 }`}
         >
             <div className="container mx-auto px-4 md:px-6 flex items-center justify-between">
                 {/* Logo */}
                 <div className="flex items-center gap-2">
-                    <div className="w-10 h-10 bg-jms-accent rounded-lg flex items-center justify-center shadow-lg shadow-jms-accent/30">
-                        <Sun className="text-white w-6 h-6 animate-pulse-slow" />
-                    </div>
-                    <div className="flex flex-col">
-                        <span className={`font-bold text-xl tracking-tight leading-none ${isScrolled ? 'text-white' : 'text-white'}`}>
-                            JMS
-                        </span>
-                        <span className={`text-[10px] uppercase tracking-widest ${isScrolled ? 'text-gray-300' : 'text-gray-200'}`}>
-                            Energia Solar
-                        </span>
-                    </div>
+                    <img
+                        src="/logo/367cf42e-0b6e-42c9-9d7f-cb7dd5fd242b.jpg"
+                        alt="JMS Energia Solar"
+                        className="h-14 md:h-16 w-auto rounded-lg"
+                    />
                 </div>
 
                 {/* Desktop Nav */}

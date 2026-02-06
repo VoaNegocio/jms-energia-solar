@@ -8,15 +8,66 @@ export default function ContactForm() {
         gasto: '',
         tipo: 'fisica'
     });
+    const [isSubmitting, setIsSubmitting] = useState(false);
 
     const handleChange = (e) => {
         setFormData({ ...formData, [e.target.name]: e.target.value });
     };
 
-    const handleSubmit = (e) => {
+    const handleSubmit = async (e) => {
         e.preventDefault();
-        console.log('Formulário enviado:', formData);
-        alert('Obrigado! Em breve um especialista entrará em contato.');
+        setIsSubmitting(true);
+        console.log('Enviando formulário:', formData);
+
+        // Mapeamento de valores para texto legível
+        const gastoMap = {
+            'ate-200': 'Até R$ 200',
+            '200-300': 'De R$ 200 a R$ 300',
+            '300-500': 'De R$ 300 a R$ 500',
+            'acima-500': 'Acima de R$ 500'
+        };
+
+        const tipoMap = {
+            'fisica': 'Pessoa Física',
+            'empresa': 'Empresa'
+        };
+
+        const payload = {
+            Nome: formData.nome,
+            Whatsapp: formData.whatsapp,
+            Consumo_Mensal: gastoMap[formData.gasto] || formData.gasto,
+            Tipo_Cliente: tipoMap[formData.tipo] || formData.tipo,
+            Data_Envio: new Date().toLocaleString('pt-BR')
+        };
+
+        try {
+            const response = await fetch('https://hook.us1.make.com/at6p771s3llmxmxvt4svmnjrl428bcu3', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(payload),
+            });
+
+            if (response.ok) {
+                console.log('Formulário enviado com sucesso para o webhook', payload);
+                alert('Obrigado! Em breve um especialista entrará em contato.');
+                setFormData({
+                    nome: '',
+                    whatsapp: '',
+                    gasto: '',
+                    tipo: 'fisica'
+                });
+            } else {
+                console.error('Erro ao enviar formulário:', response.statusText);
+                alert('Ocorreu um erro ao enviar seus dados. Por favor, tente novamente.');
+            }
+        } catch (error) {
+            console.error('Erro de rede:', error);
+            alert('Erro de conexão. Verifique sua internet e tente novamente.');
+        } finally {
+            setIsSubmitting(false);
+        }
     };
 
     return (
@@ -78,6 +129,7 @@ export default function ContactForm() {
                                         placeholder="Seu nome"
                                         className="w-full pl-12 pr-4 py-3 bg-gray-50 border border-gray-200 rounded-xl focus:ring-2 focus:ring-jms-accent focus:border-transparent outline-none transition-all placeholder-gray-400 text-gray-800"
                                         required
+                                        disabled={isSubmitting}
                                     />
                                 </div>
                             </div>
@@ -95,6 +147,7 @@ export default function ContactForm() {
                                         placeholder="(00) 00000-0000"
                                         className="w-full pl-12 pr-4 py-3 bg-gray-50 border border-gray-200 rounded-xl focus:ring-2 focus:ring-jms-accent focus:border-transparent outline-none transition-all placeholder-gray-400 text-gray-800"
                                         required
+                                        disabled={isSubmitting}
                                     />
                                 </div>
                             </div>
@@ -110,6 +163,7 @@ export default function ContactForm() {
                                         onChange={handleChange}
                                         className="w-full pl-12 pr-4 py-3 bg-gray-50 border border-gray-200 rounded-xl focus:ring-2 focus:ring-jms-accent focus:border-transparent outline-none transition-all text-gray-800 appearance-none"
                                         required
+                                        disabled={isSubmitting}
                                     >
                                         <option value="" disabled>Selecione um valor</option>
                                         <option value="ate-200">Até R$ 200</option>
@@ -124,7 +178,7 @@ export default function ContactForm() {
                             <div className="space-y-2">
                                 <label className="text-sm font-semibold text-gray-600 ml-1">Você é:</label>
                                 <div className="grid grid-cols-2 gap-4">
-                                    <label className={`cursor-pointer border rounded-xl p-3 flex items-center justify-center gap-2 transition-all ${formData.tipo === 'fisica' ? 'bg-jms-primary text-white border-jms-primary' : 'bg-gray-50 text-gray-600 border-gray-200 hover:bg-gray-100'}`}>
+                                    <label className={`cursor-pointer border rounded-xl p-3 flex items-center justify-center gap-2 transition-all ${formData.tipo === 'fisica' ? 'bg-jms-primary text-white border-jms-primary' : 'bg-gray-50 text-gray-600 border-gray-200 hover:bg-gray-100'} ${isSubmitting ? 'opacity-50 cursor-not-allowed' : ''}`}>
                                         <input
                                             type="radio"
                                             name="tipo"
@@ -132,11 +186,12 @@ export default function ContactForm() {
                                             checked={formData.tipo === 'fisica'}
                                             onChange={handleChange}
                                             className="hidden"
+                                            disabled={isSubmitting}
                                         />
                                         <User className="w-4 h-4" />
                                         <span>Pessoa Física</span>
                                     </label>
-                                    <label className={`cursor-pointer border rounded-xl p-3 flex items-center justify-center gap-2 transition-all ${formData.tipo === 'empresa' ? 'bg-jms-primary text-white border-jms-primary' : 'bg-gray-50 text-gray-600 border-gray-200 hover:bg-gray-100'}`}>
+                                    <label className={`cursor-pointer border rounded-xl p-3 flex items-center justify-center gap-2 transition-all ${formData.tipo === 'empresa' ? 'bg-jms-primary text-white border-jms-primary' : 'bg-gray-50 text-gray-600 border-gray-200 hover:bg-gray-100'} ${isSubmitting ? 'opacity-50 cursor-not-allowed' : ''}`}>
                                         <input
                                             type="radio"
                                             name="tipo"
@@ -144,6 +199,7 @@ export default function ContactForm() {
                                             checked={formData.tipo === 'empresa'}
                                             onChange={handleChange}
                                             className="hidden"
+                                            disabled={isSubmitting}
                                         />
                                         <Building className="w-4 h-4" />
                                         <span>Empresa</span>
@@ -154,10 +210,11 @@ export default function ContactForm() {
                             {/* Submit Button */}
                             <button
                                 type="submit"
-                                className="w-full bg-jms-accent hover:bg-jms-accent-hover text-white font-bold py-4 rounded-xl shadow-lg shadow-jms-accent/30 hover:shadow-jms-accent/50 transform hover:-translate-y-1 transition-all flex items-center justify-center gap-2 group"
+                                disabled={isSubmitting}
+                                className={`w-full bg-jms-accent hover:bg-jms-accent-hover text-white font-bold py-4 rounded-xl shadow-lg shadow-jms-accent/30 hover:shadow-jms-accent/50 transform hover:-translate-y-1 transition-all flex items-center justify-center gap-2 group ${isSubmitting ? 'opacity-70 cursor-not-allowed' : ''}`}
                             >
-                                QUERO ECONOMIZAR
-                                <Send className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+                                {isSubmitting ? 'ENVIANDO...' : 'QUERO ECONOMIZAR'}
+                                {!isSubmitting && <Send className="w-5 h-5 group-hover:translate-x-1 transition-transform" />}
                             </button>
 
                         </form>

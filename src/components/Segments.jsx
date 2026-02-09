@@ -43,10 +43,10 @@ export default function Segments() {
                                 Mais tranquilidade, proteção contra aumentos tarifários e previsibilidade no orçamento familiar. Transforme seu telhado em um ativo financeiro.
                             </p>
 
-                            <div className="flex items-center gap-2 text-jms-accent font-bold tracking-wide uppercase text-sm transform translate-y-4 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-300">
+                            <a href="#contato" className="inline-flex items-center gap-2 bg-jms-accent hover:bg-jms-accent-hover text-white font-bold py-3 px-6 rounded-xl transition-all duration-300 shadow-lg shadow-jms-accent/30 hover:shadow-jms-accent/50 transform hover:-translate-y-1">
                                 Simular para minha casa
                                 <ArrowRight className="w-4 h-4" />
-                            </div>
+                            </a>
                         </div>
                     </div>
 
@@ -73,10 +73,10 @@ export default function Segments() {
                                 Redução de custo fixo, aumento de margem de lucro e planejamento financeiro de longo prazo. O ROI que seu negócio precisa.
                             </p>
 
-                            <div className="flex items-center gap-2 text-white font-bold tracking-wide uppercase text-sm transform translate-y-4 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-300">
+                            <a href="#contato" className="inline-flex items-center gap-2 bg-white hover:bg-gray-100 text-jms-primary font-bold py-3 px-6 rounded-xl transition-all duration-300 shadow-lg shadow-white/10 hover:shadow-white/20 transform hover:-translate-y-1">
                                 Simular para minha empresa
                                 <ArrowRight className="w-4 h-4" />
-                            </div>
+                            </a>
                         </div>
                     </div>
 

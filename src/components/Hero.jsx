@@ -7,8 +7,8 @@ export default function Hero() {
             {/* Background Image */}
             <div className="absolute inset-0 z-0">
                 <img
-                    src="/hero_background.png"
-                    alt="Instalação de painéis solares em casa moderna ao entardecer"
+                    src="/hero_day_energy.webp"
+                    alt="Casa moderna com energia solar durante o dia"
                     className="w-full h-full object-cover"
                 />
                 {/* Overlays for readability */}

@@ -30,13 +30,13 @@ export default function Header() {
 
                 {/* Desktop Nav */}
                 <nav className="hidden md:flex items-center gap-8">
-                    <a href="#como-funciona" className="text-sm font-medium text-gray-200 hover:text-white transition-colors">
+                    <a href="#como-funciona" className={`text-sm font-medium transition-colors ${isScrolled ? 'text-gray-200 hover:text-white' : 'text-gray-800 hover:text-jms-primary'}`}>
                         Como Funciona
                     </a>
-                    <a href="#diferenciais" className="text-sm font-medium text-gray-200 hover:text-white transition-colors">
+                    <a href="#diferenciais" className={`text-sm font-medium transition-colors ${isScrolled ? 'text-gray-200 hover:text-white' : 'text-gray-800 hover:text-jms-primary'}`}>
                         Diferenciais
                     </a>
-                    <a href="#segmentos" className="text-sm font-medium text-gray-200 hover:text-white transition-colors">
+                    <a href="#segmentos" className={`text-sm font-medium transition-colors ${isScrolled ? 'text-gray-200 hover:text-white' : 'text-gray-800 hover:text-jms-primary'}`}>
                         Para Você
                     </a>
                     <a href="#contato" className="bg-jms-accent hover:bg-jms-accent-hover text-white px-5 py-2.5 rounded-lg font-bold text-sm transition-all shadow-lg shadow-jms-accent/20 hover:shadow-jms-accent/40 transform hover:-translate-y-0.5">
@@ -46,7 +46,7 @@ export default function Header() {
 
                 {/* Mobile Toggle */}
                 <button
-                    className="md:hidden text-white"
+                    className={`md:hidden ${isScrolled ? 'text-white' : 'text-gray-800'}`}
                     onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
                 >
                     {isMobileMenuOpen ? <X /> : <Menu />}

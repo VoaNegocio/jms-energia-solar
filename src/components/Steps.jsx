@@ -1,5 +1,5 @@
 import React from 'react';
-import { ClipboardCheck, Search, Calculator, FileCheck, PartyPopper } from 'lucide-react';
+import { ClipboardCheck, Search, Calculator, FileCheck, PartyPopper, ArrowRight } from 'lucide-react';
 
 const steps = [
     {
@@ -76,9 +76,13 @@ export default function Steps() {
                 </div>
 
                 <div className="mt-16 text-center animate-fade-in-up" style={{ animationDelay: '0.8s' }}>
-                    <p className="text-2xl text-jms-primary font-medium">
+                    <p className="text-2xl text-jms-primary font-medium mb-8">
                         Sem pressão. <span className="text-jms-accent font-bold">Sem compromisso.</span>
                     </p>
+                    <a href="#contato" className="inline-flex items-center gap-2 bg-jms-accent hover:bg-jms-accent-hover text-white font-bold py-4 px-10 rounded-xl transition-all shadow-xl shadow-jms-accent/30 hover:shadow-jms-accent/50 hover:-translate-y-1 text-lg">
+                        Começar Análise Gratuita
+                        <ArrowRight className="w-5 h-5" />
+                    </a>
                 </div>
 
             </div>

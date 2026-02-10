@@ -1,5 +1,5 @@
 import React from 'react';
-import { FileText, Map, Calculator, HardHat, TrendingUp } from 'lucide-react';
+import { FileText, Map, Calculator, HardHat, TrendingUp, ArrowRight } from 'lucide-react';
 
 const methodologySteps = [
     {
@@ -64,6 +64,13 @@ export default function Methodology() {
                                     Quer falar com especialistas
                                 </li>
                             </ul>
+                        </div>
+
+                        <div className="mt-8">
+                            <a href="#contato" className="inline-flex items-center gap-2 bg-jms-accent hover:bg-jms-accent-hover text-white font-bold py-3 px-8 rounded-xl transition-all shadow-lg shadow-jms-accent/30 hover:shadow-jms-accent/50 hover:-translate-y-1">
+                                Quero entender meu projeto
+                                <ArrowRight className="w-5 h-5" />
+                            </a>
                         </div>
                     </div>
 

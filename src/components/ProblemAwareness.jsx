@@ -1,5 +1,5 @@
 import React from 'react';
-import { AlertTriangle, CheckCircle2, XCircle } from 'lucide-react';
+import { AlertTriangle, CheckCircle2, XCircle, ArrowRight } from 'lucide-react';
 
 export default function ProblemAwareness() {
     return (
@@ -81,6 +81,14 @@ export default function ProblemAwareness() {
                         <p className="text-sm text-orange-800 font-medium">
                             Por isso a JMS atua como consultora de energia, não como vendedora de placas.
                         </p>
+                    </div>
+
+                    {/* CTA */}
+                    <div className="mt-12 text-center">
+                        <a href="#contato" className="inline-flex items-center gap-2 bg-jms-accent hover:bg-jms-accent-hover text-white font-bold py-4 px-8 rounded-xl transition-all shadow-lg shadow-jms-accent/30 hover:shadow-jms-accent/50 hover:-translate-y-1 text-lg">
+                            Agendar Consultoria Gratuita
+                            <ArrowRight className="w-5 h-5" />
+                        </a>
                     </div>
                 </div>
             </div>

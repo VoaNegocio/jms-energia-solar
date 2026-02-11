@@ -12,8 +12,8 @@ export default function Hero() {
                     className="w-full h-full object-cover object-center"
                 />
                 {/* Overlays for readability */}
-                <div className="absolute inset-0 bg-black/20 md:bg-white/30"></div>
-                <div className="absolute inset-0 bg-gradient-to-t from-white via-transparent to-black/10 md:to-white/50"></div>
+                <div className="absolute inset-0 bg-black/30 md:bg-black/10"></div>
+                <div className="absolute inset-0 bg-gradient-to-t from-white via-transparent to-black/20 md:to-white/20"></div>
             </div>
 
             {/* Content */}
@@ -35,7 +35,7 @@ export default function Hero() {
                     {/* Subheadline */}
                     {/* Subheadline with Glassmorphism */}
                     <div className="mb-10 animate-fade-in-up" style={{ animationDelay: '0.2s' }}>
-                        <div className="bg-white/30 backdrop-blur-md border border-white/20 rounded-2xl p-6 md:p-8 shadow-lg max-w-2xl mx-auto">
+                        <div className="bg-white/70 backdrop-blur-md border border-white/20 rounded-2xl p-6 md:p-8 shadow-lg max-w-2xl mx-auto">
                             <p className="text-lg md:text-xl text-black font-bold drop-shadow-md leading-relaxed">
                                 Energia solar com projeto consultivo, clareza técnica e economia real.
                                 Entenda exatamente quanto vai economizar antes de instalar.

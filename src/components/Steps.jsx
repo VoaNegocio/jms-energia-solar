@@ -79,7 +79,12 @@ export default function Steps() {
                     <p className="text-2xl text-jms-primary font-medium mb-8">
                         Sem pressão. <span className="text-jms-accent font-bold">Sem compromisso.</span>
                     </p>
-                    <a href="#contato" className="inline-flex items-center gap-2 bg-jms-accent hover:bg-jms-accent-hover text-white font-bold py-4 px-10 rounded-xl transition-all shadow-xl shadow-jms-accent/30 hover:shadow-jms-accent/50 hover:-translate-y-1 text-lg">
+                    <a
+                        href="https://wa.me/5528999491901?text=Ol%C3%A1!%20Vim%20pelo%20an%C3%BAncio%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es%20sobre%20energia%20solar"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center gap-2 bg-jms-accent hover:bg-jms-accent-hover text-white font-bold py-4 px-10 rounded-xl transition-all shadow-xl shadow-jms-accent/30 hover:shadow-jms-accent/50 hover:-translate-y-1 text-lg"
+                    >
                         Começar Análise Gratuita
                         <ArrowRight className="w-5 h-5" />
                     </a>

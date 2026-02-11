@@ -33,10 +33,15 @@ export default function Hero() {
                     </h1>
 
                     {/* Subheadline */}
-                    <p className="text-lg md:text-xl text-black font-semibold max-w-2xl mb-10 animate-fade-in-up drop-shadow-sm" style={{ animationDelay: '0.2s' }}>
-                        Energia solar com projeto consultivo, clareza técnica e economia real.
-                        Entenda exatamente quanto vai economizar antes de instalar.
-                    </p>
+                    {/* Subheadline with Glassmorphism */}
+                    <div className="mb-10 animate-fade-in-up" style={{ animationDelay: '0.2s' }}>
+                        <div className="bg-white/30 backdrop-blur-md border border-white/20 rounded-2xl p-6 md:p-8 shadow-lg max-w-2xl mx-auto">
+                            <p className="text-lg md:text-xl text-gray-900 font-semibold drop-shadow-sm leading-relaxed">
+                                Energia solar com projeto consultivo, clareza técnica e economia real.
+                                Entenda exatamente quanto vai economizar antes de instalar.
+                            </p>
+                        </div>
+                    </div>
 
                     {/* CTAs */}
                     <div className="flex flex-col sm:flex-row gap-4 w-full sm:w-auto animate-fade-in-up" style={{ animationDelay: '0.3s' }}>

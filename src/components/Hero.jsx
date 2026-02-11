@@ -28,7 +28,7 @@ export default function Hero() {
                     </div>
 
                     {/* Headline */}
-                    <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-gray-900 leading-tight mb-6 animate-fade-in-up drop-shadow-sm" style={{ animationDelay: '0.1s' }}>
+                    <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white leading-tight mb-6 animate-fade-in-up drop-shadow-lg" style={{ animationDelay: '0.1s' }}>
                         Transforme sua conta de energia em <span className="block mt-2"><span className="text-5xl md:text-7xl lg:text-8xl text-transparent bg-clip-text bg-gradient-to-r from-orange-600 via-orange-400 to-orange-600 bg-[length:200%_auto] animate-shimmer [filter:drop-shadow(0_0_15px_rgba(249,115,22,0.8))_drop-shadow(0_0_50px_rgba(249,115,22,0.5))] font-extrabold pb-2">previsibilidade</span></span>
                     </h1>
 
@@ -64,32 +64,32 @@ export default function Hero() {
                 </div>
 
                 {/* Trust Indicators */}
-                <div className="mt-16 grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-12 animate-fade-in-up" style={{ animationDelay: '0.5s' }}>
-                    <div className="flex items-center gap-3 text-left">
-                        <div className="w-10 h-10 rounded-full bg-jms-primary/10 border border-jms-primary/20 flex items-center justify-center shrink-0">
-                            <Shield className="w-5 h-5 text-jms-primary" />
+                <div className="mt-16 grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8 animate-fade-in-up max-w-5xl mx-auto" style={{ animationDelay: '0.5s' }}>
+                    <div className="flex items-center gap-4 text-left p-4 rounded-xl bg-black/40 backdrop-blur-sm border border-white/10 hover:bg-black/50 transition-colors">
+                        <div className="w-12 h-12 rounded-full bg-jms-accent/20 border border-jms-accent/30 flex items-center justify-center shrink-0">
+                            <Shield className="w-6 h-6 text-jms-accent" />
                         </div>
                         <div>
-                            <p className="text-gray-900 font-bold text-sm">Quase 10 anos</p>
-                            <p className="text-gray-600 text-xs">de mercado</p>
+                            <p className="text-white font-bold text-base">Quase 10 anos</p>
+                            <p className="text-gray-300 text-sm">de mercado</p>
                         </div>
                     </div>
-                    <div className="flex items-center gap-3 text-left">
-                        <div className="w-10 h-10 rounded-full bg-jms-primary/10 border border-jms-primary/20 flex items-center justify-center shrink-0">
-                            <Zap className="w-5 h-5 text-jms-primary" />
+                    <div className="flex items-center gap-4 text-left p-4 rounded-xl bg-black/40 backdrop-blur-sm border border-white/10 hover:bg-black/50 transition-colors">
+                        <div className="w-12 h-12 rounded-full bg-jms-accent/20 border border-jms-accent/30 flex items-center justify-center shrink-0">
+                            <Zap className="w-6 h-6 text-jms-accent" />
                         </div>
                         <div>
-                            <p className="text-gray-900 font-bold text-sm">Projeto sob medida</p>
-                            <p className="text-gray-600 text-xs">sem superdimensionamento</p>
+                            <p className="text-white font-bold text-base">Projeto sob medida</p>
+                            <p className="text-gray-300 text-sm">sem superdimensionamento</p>
                         </div>
                     </div>
-                    <div className="flex items-center gap-3 text-left">
-                        <div className="w-10 h-10 rounded-full bg-jms-primary/10 border border-jms-primary/20 flex items-center justify-center shrink-0">
-                            <TrendingUp className="w-5 h-5 text-jms-primary" />
+                    <div className="flex items-center gap-4 text-left p-4 rounded-xl bg-black/40 backdrop-blur-sm border border-white/10 hover:bg-black/50 transition-colors">
+                        <div className="w-12 h-12 rounded-full bg-jms-accent/20 border border-jms-accent/30 flex items-center justify-center shrink-0">
+                            <TrendingUp className="w-6 h-6 text-jms-accent" />
                         </div>
                         <div>
-                            <p className="text-gray-900 font-bold text-sm">Atendimento humano</p>
-                            <p className="text-gray-600 text-xs">suporte real</p>
+                            <p className="text-white font-bold text-base">Atendimento humano</p>
+                            <p className="text-gray-300 text-sm">suporte real</p>
                         </div>
                     </div>
                 </div>

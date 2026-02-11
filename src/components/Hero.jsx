@@ -29,7 +29,7 @@ export default function Hero() {
 
                     {/* Headline */}
                     <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-gray-900 leading-tight mb-6 animate-fade-in-up drop-shadow-sm" style={{ animationDelay: '0.1s' }}>
-                        Transforme sua conta de energia em <span className="block mt-2"><span className="text-5xl md:text-7xl lg:text-8xl text-transparent bg-clip-text bg-gradient-to-r from-orange-600 via-orange-500 to-orange-600 bg-[length:200%_auto] animate-shimmer drop-shadow-[0_0_25px_rgba(249,115,22,0.6)] font-extrabold pb-2">previsibilidade</span></span>
+                        Transforme sua conta de energia em <span className="block mt-2"><span className="text-5xl md:text-7xl lg:text-8xl text-transparent bg-clip-text bg-gradient-to-r from-orange-600 via-orange-400 to-orange-600 bg-[length:200%_auto] animate-shimmer [filter:drop-shadow(0_0_15px_rgba(249,115,22,0.8))_drop-shadow(0_0_50px_rgba(249,115,22,0.5))] font-extrabold pb-2">previsibilidade</span></span>
                     </h1>
 
                     {/* Subheadline */}

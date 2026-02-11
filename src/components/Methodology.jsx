@@ -67,7 +67,12 @@ export default function Methodology() {
                         </div>
 
                         <div className="mt-8">
-                            <a href="#contato" className="inline-flex items-center gap-2 bg-jms-accent hover:bg-jms-accent-hover text-white font-bold py-3 px-8 rounded-xl transition-all shadow-lg shadow-jms-accent/30 hover:shadow-jms-accent/50 hover:-translate-y-1">
+                            <a
+                                href="https://wa.me/5528999491901?text=Ol%C3%A1!%20Vim%20pelo%20an%C3%BAncio%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es%20sobre%20energia%20solar"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="inline-flex items-center gap-2 bg-jms-accent hover:bg-jms-accent-hover text-white font-bold py-3 px-8 rounded-xl transition-all shadow-lg shadow-jms-accent/30 hover:shadow-jms-accent/50 hover:-translate-y-1"
+                            >
                                 Quero entender meu projeto
                                 <ArrowRight className="w-5 h-5" />
                             </a>

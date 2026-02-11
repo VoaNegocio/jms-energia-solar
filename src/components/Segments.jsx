@@ -43,7 +43,12 @@ export default function Segments() {
                                 Mais tranquilidade, proteção contra aumentos tarifários e previsibilidade no orçamento familiar. Transforme seu telhado em um ativo financeiro.
                             </p>
 
-                            <a href="#contato" className="inline-flex items-center gap-2 bg-jms-accent hover:bg-jms-accent-hover text-white font-bold py-3 px-6 rounded-xl transition-all duration-300 shadow-lg shadow-jms-accent/30 hover:shadow-jms-accent/50 transform hover:-translate-y-1">
+                            <a
+                                href="https://wa.me/5528999491901?text=Ol%C3%A1!%20Vim%20pelo%20an%C3%BAncio%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es%20sobre%20energia%20solar"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="inline-flex items-center gap-2 bg-jms-accent hover:bg-jms-accent-hover text-white font-bold py-3 px-6 rounded-xl transition-all duration-300 shadow-lg shadow-jms-accent/30 hover:shadow-jms-accent/50 transform hover:-translate-y-1"
+                            >
                                 Simular para minha casa
                                 <ArrowRight className="w-4 h-4" />
                             </a>
@@ -73,7 +78,12 @@ export default function Segments() {
                                 Redução de custo fixo, aumento de margem de lucro e planejamento financeiro de longo prazo. O ROI que seu negócio precisa.
                             </p>
 
-                            <a href="#contato" className="inline-flex items-center gap-2 bg-white hover:bg-gray-100 text-jms-primary font-bold py-3 px-6 rounded-xl transition-all duration-300 shadow-lg shadow-white/10 hover:shadow-white/20 transform hover:-translate-y-1">
+                            <a
+                                href="https://wa.me/5528999491901?text=Ol%C3%A1!%20Vim%20pelo%20an%C3%BAncio%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es%20sobre%20energia%20solar"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="inline-flex items-center gap-2 bg-white hover:bg-gray-100 text-jms-primary font-bold py-3 px-6 rounded-xl transition-all duration-300 shadow-lg shadow-white/10 hover:shadow-white/20 transform hover:-translate-y-1"
+                            >
                                 Simular para minha empresa
                                 <ArrowRight className="w-4 h-4" />
                             </a>

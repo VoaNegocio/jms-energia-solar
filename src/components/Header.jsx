@@ -39,7 +39,12 @@ export default function Header() {
                     <a href="#segmentos" className={`text-sm font-medium transition-colors ${isScrolled ? 'text-gray-200 hover:text-white' : 'text-gray-800 hover:text-jms-primary'}`}>
                         Para Você
                     </a>
-                    <a href="#contato" className="bg-jms-accent hover:bg-jms-accent-hover text-white px-5 py-2.5 rounded-lg font-bold text-sm transition-all shadow-lg shadow-jms-accent/20 hover:shadow-jms-accent/40 transform hover:-translate-y-0.5">
+                    <a
+                        href="https://wa.me/5528999491901?text=Ol%C3%A1!%20Vim%20pelo%20an%C3%BAncio%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es%20sobre%20energia%20solar"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="bg-jms-accent hover:bg-jms-accent-hover text-white px-5 py-2.5 rounded-lg font-bold text-sm transition-all shadow-lg shadow-jms-accent/20 hover:shadow-jms-accent/40 transform hover:-translate-y-0.5"
+                    >
                         Simular Economia
                     </a>
                 </nav>
@@ -59,7 +64,13 @@ export default function Header() {
                     <a href="#como-funciona" className="text-gray-200 py-2" onClick={() => setIsMobileMenuOpen(false)}>Como Funciona</a>
                     <a href="#diferenciais" className="text-gray-200 py-2" onClick={() => setIsMobileMenuOpen(false)}>Diferenciais</a>
                     <a href="#segmentos" className="text-gray-200 py-2" onClick={() => setIsMobileMenuOpen(false)}>Para Você</a>
-                    <a href="#contato" className="bg-jms-accent text-white py-3 rounded-lg text-center font-bold" onClick={() => setIsMobileMenuOpen(false)}>
+                    <a
+                        href="https://wa.me/5528999491901?text=Ol%C3%A1!%20Vim%20pelo%20an%C3%BAncio%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es%20sobre%20energia%20solar"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="bg-jms-accent text-white py-3 rounded-lg text-center font-bold"
+                        onClick={() => setIsMobileMenuOpen(false)}
+                    >
                         Simular Economia
                     </a>
                 </div>

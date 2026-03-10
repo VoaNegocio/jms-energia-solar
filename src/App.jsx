@@ -1,23 +1,28 @@
+import { lazy, Suspense } from 'react';
 import Header from './components/Header';
 import Hero from './components/Hero';
-import ProblemAwareness from './components/ProblemAwareness';
-import Methodology from './components/Methodology';
-import Segments from './components/Segments';
-import Steps from './components/Steps';
-import ContactForm from './components/ContactForm';
-import Footer from './components/Footer';
+
+// Lazy load below-the-fold components
+const ProblemAwareness = lazy(() => import('./components/ProblemAwareness'));
+const Methodology = lazy(() => import('./components/Methodology'));
+const Segments = lazy(() => import('./components/Segments'));
+const Steps = lazy(() => import('./components/Steps'));
+const ContactForm = lazy(() => import('./components/ContactForm'));
+const Footer = lazy(() => import('./components/Footer'));
 
 function App() {
   return (
     <div className="min-h-screen bg-slate-50 font-sans text-jms-primary">
       <Header />
       <Hero />
-      <ProblemAwareness />
-      <Methodology />
-      <Segments />
-      <Steps />
-      <ContactForm />
-      <Footer />
+      <Suspense fallback={<div className="min-h-[200px]" />}>
+        <ProblemAwareness />
+        <Methodology />
+        <Segments />
+        <Steps />
+        <ContactForm />
+        <Footer />
+      </Suspense>
     </div>
   );
 }

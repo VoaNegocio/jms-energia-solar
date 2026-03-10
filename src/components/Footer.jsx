@@ -13,6 +13,10 @@ export default function Footer() {
                             src="/logo/367cf42e-0b6e-42c9-9d7f-cb7dd5fd242b.jpg"
                             alt="JMS Energia Solar"
                             className="h-16 md:h-20 w-auto rounded-lg"
+                            loading="lazy"
+                            decoding="async"
+                            width="80"
+                            height="80"
                         />
                     </div>
 

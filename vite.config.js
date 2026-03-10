@@ -8,4 +8,19 @@ export default defineConfig({
     postcss: './postcss.config.js',
     devSourcemap: true,
   },
+  build: {
+    // Minify with terser for smaller output
+    target: 'es2020',
+    // Chunk splitting for better caching
+    rollupOptions: {
+      output: {
+        manualChunks: {
+          'vendor-react': ['react', 'react-dom'],
+          'vendor-icons': ['lucide-react'],
+        },
+      },
+    },
+    // Inline assets smaller than 8KB
+    assetsInlineLimit: 8192,
+  },
 })

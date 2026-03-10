@@ -9,7 +9,7 @@ export default function Header() {
         const handleScroll = () => {
             setIsScrolled(window.scrollY > 10);
         };
-        window.addEventListener('scroll', handleScroll);
+        window.addEventListener('scroll', handleScroll, { passive: true });
         return () => window.removeEventListener('scroll', handleScroll);
     }, []);
 
@@ -25,6 +25,8 @@ export default function Header() {
                         src="/logo/367cf42e-0b6e-42c9-9d7f-cb7dd5fd242b.jpg"
                         alt="JMS Energia Solar"
                         className="h-20 md:h-24 w-auto rounded-lg"
+                        width="96"
+                        height="96"
                     />
                 </div>
 

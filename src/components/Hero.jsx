@@ -10,6 +10,10 @@ export default function Hero() {
                     src="/hero_day_energy.webp"
                     alt="Casa moderna com energia solar durante o dia"
                     className="w-full h-full object-cover object-center"
+                    fetchPriority="high"
+                    decoding="async"
+                    width="1920"
+                    height="1080"
                 />
                 {/* Overlays for readability */}
                 <div className="absolute inset-0 bg-black/30 md:bg-black/10"></div>
